@@ -6,7 +6,7 @@
         <title>Iniciar Sesión</title>
         @vite(['resources/css/app.css','resources/js/app.js'])
     </head>
-    <body>
+    <body class="p-3 mb-2 bg-primary-subtle">
 
         <div class="container mt-5">
             <div class="row justify-content-center">
@@ -16,7 +16,7 @@
                             <h3 class="text-center">Bienvenido</h3>
                         </div>
                         <div class="card-body">
-                            <form action="Cinicio" method="post">
+                            <form action="{{route('equipo')}}">
                                 <div class="mb-3">
                                     <label for="Correo" class="form-label">Correo</label>
                                     <input type="text" class="form-control" id="Correo" name="fcorreo" placeholder="Ingresa tu Correo">
@@ -26,12 +26,12 @@
                                     <input type="password" class="form-control" id="contrasena" name="fclave" placeholder="Ingresa tu contraseña">
                                 </div>
                                 <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary" value="login">Iniciar Sesión</button>
+                                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                                 </div>
                             </form>
                         </div>
                         <div class="card-footer text-center">
-                            ¿No tienes una cuenta? <a href="ControladorUsuario">Regístrate</a>
+                            ¿No tienes una cuenta? <a href="#">Regístrate</a>
                         </div>
                     </div>
                 </div>
