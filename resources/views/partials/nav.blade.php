@@ -11,7 +11,7 @@
             <a class="nav-link " href="{{route('equipo')}}" role="button"  aria-expanded="false">
               REGISTRO DE EQUIPOS
             </a>
-            
+
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

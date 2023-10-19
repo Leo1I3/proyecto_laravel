@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
+
 
 class DevolucionController extends Controller
 {
@@ -11,7 +12,8 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        //
+        $_POST = DB:: table('detallesalida')->get();
+        return $_POST;
     }
 
     /**

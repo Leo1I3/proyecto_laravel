@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DevolucionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/','welcome')->name('inicio');
+Route::get('/dev',[DevolucionController::class,'index'])->name('dev.index');
 Route::view('/devolucion','devolucion')->name('devolucion');
 Route::view('/equipo','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
