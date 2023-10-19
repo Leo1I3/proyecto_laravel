@@ -32,7 +32,7 @@
                         </div>
                         <div class="card-footer text-center">
                             ¿No tienes una cuenta? <a href="#">Regístrate</a>
-                            <a >XD</a>
+                            
                         </div>
                     </div>
                 </div>
