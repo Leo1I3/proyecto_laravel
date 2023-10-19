@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB as FacadesDB;
 
 class DevolucionController extends Controller
 {
@@ -12,7 +12,7 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        $_POST = DB:: table('detallesalida')->get();
+        $_POST = FacadesDB:: table('detallesalida')->get();
         return $_POST;
     }
 

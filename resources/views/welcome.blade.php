@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar Sesión</title>
         @vite(['resources/css/app.css','resources/js/app.js'])
+        
     </head>
     <body class="p-3 mb-2 bg-primary-subtle">
 
@@ -32,7 +33,7 @@
                         </div>
                         <div class="card-footer text-center">
                             ¿No tienes una cuenta? <a href="#">Regístrate</a>
-                            
+                            <A>xd</A>
                         </div>
                     </div>
                 </div>
