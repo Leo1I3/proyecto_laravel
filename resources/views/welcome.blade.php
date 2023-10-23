@@ -33,7 +33,8 @@
                         </div>
                         <div class="card-footer text-center">
                             ¿No tienes una cuenta? <a href="#">Regístrate</a>
-                            
+                            <a href="">oiudfsouf</a>
+
                         </div>
                     </div>
                 </div>
