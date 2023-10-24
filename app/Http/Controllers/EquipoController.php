@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PHPUnit\Event\TestRunner\EventFacadeSealedSubscriber;
 
 class EquipoController extends Controller
 {
@@ -19,7 +20,8 @@ class EquipoController extends Controller
      */
     public function create()
     {
-        //
+        FacadesDB::insert('insert into equipo (idequipo, marcaE, codigoE, colorE, despE, estadoE) values (NULL, ?, ?, ?, ?, ?)', []);
+        return "Insertado";
     }
 
     /**
@@ -51,7 +53,7 @@ class EquipoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        FacadesBDB::update('update  set votes = 100 where name = ?', ['']);
     }
 
     /**

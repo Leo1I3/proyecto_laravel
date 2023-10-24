@@ -12,7 +12,8 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        //
+        $_POST = FacadesDB:: table('detallesalida')->get();
+        return $_POST;
     }
 
     /**
@@ -20,7 +21,8 @@ class DevolucionController extends Controller
      */
     public function create()
     {
-        //
+        FacadesDB::insert('insert into `detallesalida`(`idDetalleSalida`,`fechaEntregaDetalleSalida`, `idSalida`, `idequipo`) VALUES (null,?,?,?)', []);
+        return "Insertado";
     }
 
     /**
@@ -52,7 +54,7 @@ class DevolucionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        FacadesDB::update('update detallesalida set fechaEntregaDetalleSalida =?,idSalida=?,idequipo=?  where idDetalleSalida = ?', []);
     }
 
     /**
