@@ -12,8 +12,7 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB:: table('detallesalida')->get();
-        return $_POST;
+        //
     }
 
     /**
