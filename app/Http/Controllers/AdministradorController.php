@@ -1,18 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\DB as FacadesDB;
-use Illuminate\Http\Request;
-use PHPUnit\Event\TestRunner\EventFacadeSealedSubscriber;
 
-class EquipoController extends Controller
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\DB as FacadesDB;
+
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from equipo ORDER BY idequipo = ?', []);
+        $_POST = FacadesDB::select('select * from administrador ORDER BY idadministrador = ?', []);
 
         return $_POST;
     }
@@ -30,7 +31,7 @@ class EquipoController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `equipo`(idequipo,`marcaE`, `codigoE`, `colorE`, `despE` , `estadoE`) VALUES (null,?,?,?,?,?)', []);
+        FacadesDB::insert('insert INTO `administrador`(idadministrador,`cedulaadministrador`, `nombreadministrador`, `aprellidoadministrador`, `telefonoadministrador;`) VALUES (null,?,?)', []);
         return "Insertado";
     }
 
@@ -55,7 +56,7 @@ class EquipoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        FacadesDB::update('update equipo set marcaE =?,codigoE=?,colorE=?,despE=?,estadoE=?  where idequipo = ?', []);
+        FacadesDB::update('update administrador set cedulaadministrador =?,nombreadministrador=?,aprellidoadministrador=?,telefonoadministrador=?  where idadministrador = ?', []);
     }
 
     /**
@@ -63,6 +64,6 @@ class EquipoController extends Controller
      */
     public function destroy(string $id)
     {
-        FacadesDB::delete('delete from equipo where idequipo = ?', []);
+        FacadesDB::delete('delete from administrador where idadministrador = ?', []);
     }
 }

@@ -12,7 +12,7 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from idDetalleSalida ORDER BY idDetalleSalida = ?', []);
+        $_POST = FacadesDB::select('select * from detallesalida ORDER BY idDetalleSalida = ?', []);
 
         return $_POST;
     }

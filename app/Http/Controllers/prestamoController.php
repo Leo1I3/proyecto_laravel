@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Http\Request;
+
 
 class prestamoController extends Controller
 {
@@ -11,7 +12,9 @@ class prestamoController extends Controller
      */
     public function index()
     {
-        //
+        $_POST = FacadesDB::select('select * from salidaequipo ORDER BY idsalida = ?', []);
+
+        return $_POST;
     }
 
     /**
@@ -19,7 +22,7 @@ class prestamoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -27,7 +30,8 @@ class prestamoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        FacadesDB::insert('insert INTO `salidaequipo`(idsalida,`fechasalida`, `idusuario`, `idadministrador`) VALUES (null,?,?,?)', []);
+        return "Insertado";
     }
 
     /**
@@ -51,7 +55,7 @@ class prestamoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        FacadesDB::update('update salidaequipo set fechasalida =?,idusuario=?,idadministrador=?  where idsalida = ?', []);
     }
 
     /**
@@ -59,6 +63,6 @@ class prestamoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        FacadesDB::delete('delete from salidaequipo where idsalida = ?', []);
     }
 }
