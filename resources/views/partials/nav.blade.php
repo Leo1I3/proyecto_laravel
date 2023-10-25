@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav">
           <li class="nav-item ">
-            <a class="nav-link " href="{{route('equipo')}}" role="button"  aria-expanded="false">
+            <a class="nav-link " href="{{route('detallesalida')}}" role="button"  aria-expanded="false">
               REGISTRO DE EQUIPOS
             </a>
 

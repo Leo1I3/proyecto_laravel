@@ -15,6 +15,8 @@ use App\Http\Controllers\DevolucionController;
 
 Route::view('/','welcome')->name('inicio');
 Route::get('/dev',[DevolucionController::class,'index'])->name('dev.index');
+Route::get('/detalle',[DevolucionController::class,'create'])->name('detallesalida');
+
 Route::view('/devolucion','devolucion')->name('devolucion');
 Route::view('/equipo','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
