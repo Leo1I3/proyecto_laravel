@@ -12,8 +12,9 @@
     <div class="container mt-5">
         <h1>Registro de Computadoras</h1>
 
-        
-        <form action="controladorequipo" method="post">
+
+        <form action="{{ route('equipof') }}" method="post">
+            @csrf
             <div class="form-group">
                 <input type="hidden" class="form-control" id="idEquipo"name="fequipo" value="${unquipo.idequipo}">
                 <label for="marca">Marca:</label>
@@ -36,10 +37,10 @@
                 <div>
                     <div><input type="radio"name="festadoE" value="${unequipo.estadoo}">prestado</div>
                     <div><input type="radio">no prestado</div>
-                
+
             </div>
             </div>
-            
+
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Registrar</button>
         </form>
     </div>

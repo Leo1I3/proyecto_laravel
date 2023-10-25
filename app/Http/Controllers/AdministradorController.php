@@ -64,6 +64,9 @@ class UsuarioController extends Controller
      */
     public function destroy(string $id)
     {
-        FacadesDB::delete('delete from administrador where idadministrador = ?', []);
+        FacadesDB::delete('delete from administrador where idadministrador = ?', [
+
+            
+        ]);
     }
 }

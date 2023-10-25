@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DevolucionController;
+use App\Http\Controllers\EquipoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +17,7 @@ use App\Http\Controllers\DevolucionController;
 
 Route::view('/','welcome')->name('inicio');
 Route::get('/dev',[DevolucionController::class,'index'])->name('dev.index');
-Route::get('/detalle',[DevolucionController::class,'create'])->name('detallesalida');
+Route::post('/equipo',[EquipoController::class,'store'])->name('equipof');
 
 Route::view('/devolucion','devolucion')->name('devolucion');
 Route::view('/equipo','equipo')->name('equipo');

@@ -30,7 +30,13 @@ class EquipoController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `equipo`(idequipo,`marcaE`, `codigoE`, `colorE`, `despE` , `estadoE`) VALUES (null,?,?,?,?,?)', []);
+        FacadesDB::insert('insert INTO `equipo`(idequipo,`marcaE`, `codigoE`, `colorE`, `despE` , `estadoE`) VALUES (null,?,?,?,?,?)', [
+            $request->fmarcaE,
+            $request->fcodigoE,
+            $request->fcolorE,
+            $request->fdespE,
+            $request->festadoE
+        ]);
         return "Insertado";
     }
 
