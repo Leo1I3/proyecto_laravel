@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB as FacadesDB;
 use Illuminate\Http\Request;
 use PHPUnit\Event\TestRunner\EventFacadeSealedSubscriber;
 
@@ -12,7 +12,9 @@ class EquipoController extends Controller
      */
     public function index()
     {
-        //
+        $_POST = FacadesDB::select('select * from idDetalleSalida ORDER BY idDetalleSalida = ?', []);
+
+        return $_POST;
     }
 
     /**
@@ -20,8 +22,7 @@ class EquipoController extends Controller
      */
     public function create()
     {
-        FacadesDB::insert('insert into equipo (idequipo, marcaE, codigoE, colorE, despE, estadoE) values (NULL, ?, ?, ?, ?, ?)', []);
-        return "Insertado";
+
     }
 
     /**
@@ -29,7 +30,8 @@ class EquipoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        FacadesDB::insert('insert into `detallesalida`(`idDetalleSalida`,`fechaEntregaDetalleSalida`, `idSalida`, `idequipo`) VALUES (null,?,?,?)', []);
+        return "Insertado";
     }
 
     /**
@@ -53,7 +55,7 @@ class EquipoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        FacadesBDB::update('update  set votes = 100 where name = ?', ['']);
+        FacadesDB::update('update detallesalida set fechaEntregaDetalleSalida =?,idSalida=?,idequipo=?  where idDetalleSalida = ?', []);
     }
 
     /**
@@ -61,6 +63,6 @@ class EquipoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        FacadesDB::delete('delete from detallesalida where idDetalleSalida = ?', []);
     }
 }
