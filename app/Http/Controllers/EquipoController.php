@@ -37,7 +37,6 @@ class EquipoController extends Controller
             $request->fdespE,
             $request->festadoE
         ]);
-        return "Insertado";
     }
 
     /**
@@ -61,7 +60,13 @@ class EquipoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        FacadesDB::update('update equipo set marcaE =?,codigoE=?,colorE=?,despE=?,estadoE=?  where idequipo = ?', []);
+        FacadesDB::update('update equipo set marcaE =?,codigoE=?,colorE=?,despE=?,estadoE=?  where idequipo = ?', [
+            $request->fmarcaE,
+            $request->fcodigoE,
+            $request->fcolorE,
+            $request->fdespE,
+            $request->festadoE
+        ]);
     }
 
     /**
@@ -69,6 +74,8 @@ class EquipoController extends Controller
      */
     public function destroy(string $id)
     {
-        FacadesDB::delete('delete from equipo where idequipo = ?', []);
+        FacadesDB::delete('delete from equipo where idequipo = ?', [
+            
+        ]);
     }
 }

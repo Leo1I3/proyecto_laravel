@@ -13,7 +13,7 @@
         <h1>Registro de Computadoras</h1>
 
 
-        <form action="{{ route('equipof') }}" method="post">
+        <form action="{{ route('equipof') }} " method="post">
             @csrf
             <div class="form-group">
                 <input type="hidden" class="form-control" id="idEquipo"name="fequipo" value="${unquipo.idequipo}">
