@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DevolucionController;
 use App\Http\Controllers\EquipoController;
+use App\Http\Controllers\prestamoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,21 +18,21 @@ use App\Http\Controllers\EquipoController;
 
 Route::view('/','welcome')->name('inicio');
 Route::view('/devolucion','devolucion')->name('devolucion');
-Route::view('/equipo','equipo')->name('equipo');
+Route::view('/equipoview','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
 Route::view('/prestamo','prestamo')->name('prestamo');
 
 Route::get('/dev',[DevolucionController::class,'index'])->name('dev.index');
 
-Route::post('/equipo',[EquipoController::class,'store'])->name('equipof');
+Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorf');
-Route::post('/prestamo',[prestamoController::class,'store'])->name('salidaf');
+// Route::post('/prestamo',[prestamoController::class,'store'])->name('salidaf');
 Route::post('/Devolucion',[DevolucionController::class,'store'])->name('devolucionf');
 //Route::post('/usuario',[UsuarioController::class,'store'])->name('usuariof');
 
-Route::post('/equipo',[EquipoController::class,'update'])->name('equipoff');
+Route::post('/equipoUp',[EquipoController::class,'update'])->name('equiff');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorff');
-Route::post('/prestamo',[prestamoController::class,'update'])->name('salidaff');
+// Route::post('/prestamo',[prestamoController::class,'update'])->name('salidaff');
 Route::post('/Devolucion',[DevolucionController::class,'update'])->name('devolucionff');
 //Route::post('/usuario',[UsuarioController::class,'update'])->name('usuarioff');
 
