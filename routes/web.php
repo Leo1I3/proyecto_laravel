@@ -22,11 +22,11 @@ Route::view('/equipoview','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
 Route::view('/prestamo','prestamo')->name('prestamo');
 
-Route::get('/dev',[DevolucionController::class,'index'])->name('dev.index');
+Route::get('/dev',[prestamoController::class,'index'])->name('listaprestamo');
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorf');
-// Route::post('/prestamo',[prestamoController::class,'store'])->name('salidaf');
+Route::post('/prestamoPost',[prestamoController::class,'store'])->name('salidaf');
 Route::post('/Devolucion',[DevolucionController::class,'store'])->name('devolucionf');
 //Route::post('/usuario',[UsuarioController::class,'store'])->name('usuariof');
 
