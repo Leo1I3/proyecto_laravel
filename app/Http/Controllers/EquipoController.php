@@ -37,6 +37,7 @@ class EquipoController extends Controller
             $request->fdespE,
             $request->festadoE
         ]);
+        return redirect()->route('equipo');
     }
 
     /**
@@ -67,6 +68,7 @@ class EquipoController extends Controller
             $request->fdespE,
             $request->festadoE
         ]);
+
     }
 
     /**
@@ -75,7 +77,7 @@ class EquipoController extends Controller
     public function destroy(string $id)
     {
         FacadesDB::delete('delete from equipo where idequipo = ?', [
-            
+
         ]);
     }
 }

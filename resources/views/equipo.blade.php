@@ -17,30 +17,29 @@
         <h1>Registro de Computadoras</h1>
 
 
-        <form action="{{ route('equipof') }} " method="post">
+        <form action="{{ route('equipof') }}" method="post">
             @csrf
             <div class="form-group">
-                <input type="hidden" class="form-control" id="idEquipo"name="fequipo" value="${unquipo.idequipo}">
+                <input type="hidden" class="form-control" id="idEquipo"name="fequipo">
                 <label for="marca">Marca:</label>
-                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="fmarcaE" value="${unequipo.marca}">
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="fmarcaE">
             </div>
             <div class="form-group">
                 <label for="modelo">Codigo:</label>
-                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el modelo" name="fcodigoE" value="${unequipo.codigo}">
+                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el modelo" name="fcodigoE">
             </div>
             <div class="form-group">
                 <label for="serial">Color:</label>
-                <input type="text" class="form-control" id="color" placeholder="Ingrese el número de serie" name="fcolorE" value="${unequipo.color}">
-            </div>
+                <input type="text" class="form-control" id="color" placeholder="Ingrese el número de serie" name="fcolorE"
             <div class="form-group">
                 <label for="serial">Descripcion:</label>
-                <input type="text" class="form-control" id="serial" placeholder="Ingrese el número de serie" name="fdespE" value="${unequipo.desp}">
+                <input type="text" class="form-control" id="serial" placeholder="Ingrese el número de serie" name="fdespE">
             </div>
             <div class="form-group">
-                <label for="serial">estado:</label>
+                <label for="serial">Estado:</label>
                 <div>
-                    <div><input type="radio"name="festadoE" value="${unequipo.estadoo}">prestado</div>
-                    <div><input type="radio">no prestado</div>
+                    <div><input type="radio" value="0">Prestado</div>
+                    <div><input type="radio"value="1">No prestado</div>
 
             </div>
             </div>
