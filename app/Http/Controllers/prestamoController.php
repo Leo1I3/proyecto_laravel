@@ -39,7 +39,7 @@ class prestamoController extends Controller
             $request->idadministrador,
 
         ]);
-        return "Insertado";
+        return redirect()->route('prestamo');
     }
 
     /**
@@ -68,6 +68,7 @@ class prestamoController extends Controller
             $request->idusuario,
             $request->idadministrador,
         ]);
+        return redirect()->route('prestamo');
     }
 
     /**
@@ -76,5 +77,6 @@ class prestamoController extends Controller
     public function destroy(string $id)
     {
         FacadesDB::delete('delete from salidaequipo where idsalida = ?', []);
+        return redirect()->route('prestamo');
     }
 }

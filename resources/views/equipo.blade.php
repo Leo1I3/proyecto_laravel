@@ -26,20 +26,20 @@
             </div>
             <div class="form-group">
                 <label for="modelo">Codigo:</label>
-                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el modelo" name="fcodigoE">
+                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el codigo" name="fcodigoE">
             </div>
             <div class="form-group">
                 <label for="serial">Color:</label>
-                <input type="text" class="form-control" id="color" placeholder="Ingrese el número de serie" name="fcolorE"
+                <input type="text" class="form-control" id="color" placeholder="Ingrese el color" name="fcolorE"
             <div class="form-group">
                 <label for="serial">Descripcion:</label>
-                <input type="text" class="form-control" id="serial" placeholder="Ingrese el número de serie" name="fdespE">
+                <input type="text" class="form-control" id="serial" placeholder="Ingrese una descripcion de el equipo" name="fdespE">
             </div>
             <div class="form-group">
                 <label for="serial">Estado:</label>
                 <div>
-                    <div><input type="radio" value="0">Prestado</div>
-                    <div><input type="radio"value="1">No prestado</div>
+                    <div><input name="festadoE" type="radio" value="1">Prestado</div>
+                    <div><input name="festadoE" type="radio"value="0">No prestado</div>
 
             </div>
             </div>

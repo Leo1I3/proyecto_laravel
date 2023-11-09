@@ -30,12 +30,14 @@ class EquipoController extends Controller
      */
     public function store(Request $request)
     {
+
+
         FacadesDB::insert('insert INTO `equipo`(idequipo,`marcaE`, `codigoE`, `colorE`, `despE` , `estadoE`) VALUES (null,?,?,?,?,?)', [
             $request->fmarcaE,
             $request->fcodigoE,
             $request->fcolorE,
             $request->fdespE,
-            $request->festadoE
+            $request->$request,
         ]);
         return redirect()->route('equipo');
     }
@@ -68,7 +70,7 @@ class EquipoController extends Controller
             $request->fdespE,
             $request->festadoE
         ]);
-
+        return redirect()->route('equipo');
     }
 
     /**
@@ -79,5 +81,6 @@ class EquipoController extends Controller
         FacadesDB::delete('delete from equipo where idequipo = ?', [
 
         ]);
+        return redirect()->route('equipo');
     }
 }
