@@ -17,7 +17,7 @@
         <!-- Formulario para ingresar la fecha de entrega, ID de salida y ID de equipo -->
         <form action="{{ route('devolucionf') }}" method="post">
             @csrf
-            <div class="form-group">
+            <div class="form-group"> 
                 <label for="fechaEntrega">Fecha de Entrega:</label>
                 <input type="date" class="form-control" id="fechaEntrega" name="fechaEntregaDetalleSalida">
             </div>

@@ -54,14 +54,14 @@
             </thead>
             <tbody>
                 <!-- Aquí puedes agregar filas con datos de salidas utilizando PHP, Python, u otro lenguaje en tu servidor -->
-                @foreach ( as )
+                @foreach ($elprestamo as $losprestamos )
                 <tr>
-                        <td name="fechasalida"></td>
-                        <td value="fechasalida"></td>
-                        <td value="${unatabla.idusuario}"></td>
-                        <td value="${unatabla.idAdministrador}"></td>
+                        <td value="{{$losprestamos->idsalida}}">{{$losprestamos->idsalida}}</td>
+                        <td value="{{$losprestamos->fechasalida}}">{{$losprestamos->fechasalida}}</td>
+                        <td value="{{$losprestamos->idusuario}}">{{$losprestamos->idusuario}}</td>
+                        <td value="{{$losprestamos->idadministrador}}">{{$losprestamos->idadministrador}}</td>
                 </tr>
-                @endforeach< itemref="{{ route('listaprestamo') }}">
+                @endforeach
 
             </tbody>
         </table>
