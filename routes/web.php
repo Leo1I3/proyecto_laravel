@@ -35,7 +35,7 @@ Route::post('/equipoUp',[EquipoController::class,'update'])->name('equiff');
 Route::post('/Devolucion',[DevolucionController::class,'update'])->name('devolucionff');
 //Route::post('/usuario',[UsuarioController::class,'update'])->name('usuarioff');
 
-Route::post('/equipo',[EquipoController::class,'destroy'])->name('equipofff');
+Route::post('/equipodes',[EquipoController::class,'destroy'])->name('equipofff');
 //Route::post('/administrador',[AdministradorController::class,'destroy'])->name('administradorfff');
 Route::post('/prestamo',[prestamoController::class,'destroy'])->name('salidafff');
 Route::post('/Devolucion',[DevolucionController::class,'destroy'])->name('devolucionfff');
