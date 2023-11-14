@@ -19,8 +19,7 @@
             @csrf
             <div class="form-group">
                 <label for="fechaEntrega">Fecha de Entrega:</label>
-                <input type="hidden" class="form-control" name="fidDetalleSalida" value="${unasalida.idDetalleSalida}">
-                <input type="date" class="form-control" id="fechaEntrega" name="ffechaEntregaDetalleSalida">
+                <input type="date" class="form-control" id="fechaEntrega" name="fechaEntregaDetalleSalida">
             </div>
             <div class="form-group">
                 <label for="idSalida">ID de Salida:</label>
