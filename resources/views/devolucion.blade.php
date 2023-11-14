@@ -17,7 +17,7 @@
         <!-- Formulario para ingresar la fecha de entrega, ID de salida y ID de equipo -->
         <form action="{{ route('devolucionf') }}" method="post">
             @csrf
-            <div class="form-group"> 
+            <div class="form-group">
                 <label for="fechaEntrega">Fecha de Entrega:</label>
                 <input type="date" class="form-control" id="fechaEntrega" name="fechaEntregaDetalleSalida">
             </div>
@@ -63,8 +63,8 @@
                 @foreach ($devolucion1 as $devoluciones1)
                     <tr>
                         <td value="{{ $devoluciones1->idDetalleSalida }}">{{ $devoluciones1->idDetalleSalida }}</td>
-                        <td value="{{ $devoluciones1->fechaEntregaDetalleSalida }}">
-                            {{ $devoluciones1->fechaEntregaDetalleSalida }}</td>
+                        <td value="{{ $devoluciones1->fechaEntregaDetalleSalida }}">{{ $devoluciones1->fechaEntregaDetalleSalida }}</td>
+
                         <td value="{{ $devoluciones1->idSalida }}">{{ $devoluciones1->idSalida }}</td>
                         <td value="{{ $devoluciones1->idequipo }}">{{ $devoluciones1->idequipo }} </td>
                     </tr>

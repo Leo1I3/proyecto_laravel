@@ -54,7 +54,7 @@
             </thead>
             <tbody>
                 <!-- Aquí puedes agregar filas con datos de salidas utilizando PHP, Python, u otro lenguaje en tu servidor -->
-                @foreach ($elprestamo as $losprestamos )
+                @foreach ($prestamo as $losprestamos )
                 <tr>
                         <td value="{{$losprestamos->idsalida}}">{{$losprestamos->idsalida}}</td>
                         <td value="{{$losprestamos->fechasalida}}">{{$losprestamos->fechasalida}}</td>

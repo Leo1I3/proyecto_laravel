@@ -18,11 +18,11 @@ use App\Http\Controllers\prestamoController;
 
 Route::view('/','welcome')->name('inicio');
 Route::get('/devolucion',[DevolucionController::class, 'index'])->name('devolucion');
+Route::get('/prestamo',[prestamoController::class, 'index'])->name('prestamo');
 Route::view('/equipoview','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
 Route::view('/prestamo','prestamo')->name('prestamo');
 
-Route::get('/dev',[prestamoController::class,'index'])->name('listaprestamo');
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorf');
