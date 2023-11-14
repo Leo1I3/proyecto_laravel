@@ -16,8 +16,7 @@
         <form action="{{ route('salidaf') }}" method="post">
             <div class="form-group">
                 <label for="fechaSalida">Fecha de Salida:</label>
-                <input type="hidden" class="form-control" id="id" name="fidSalida" value="${unquipo.idsalida}">
-                <input type="date" class="form-control" id="fechaSalida" name="ffechaSalida" value="${unquipo.fechasalida}">
+                <input type="date" class="form-control" id="fechaSalida" name="ffechaSalida" value="">
             </div>
 
 
@@ -25,18 +24,20 @@
                 <label for="idSalida">ID de usuario:</label>
 
                 <select class="form-control"  name="fidusuario" >
-                    <c:forEach items="${miusuario.listar(0)}" var="unusuario"><!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
-                    <option value="${unusuario.idusuario}">${unusuario.idusuario}</option>
-                    </c:forEach><!-- Agrega más opciones según sea necesario -->
+                    <option value="">seleccione</option>
+                    <@foreach ($usuario as $losusuarios)<!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
+                    <option value=""></option>
+                    @endforeach<!-- Agrega más opciones según sea necesario -->
                 </select>
 
             </div>
             <div class="form-group">
                 <label for="idEquipo">ID de administrador:</label>
                 <select class="form-control" id="idEquipo" name="fidAdministrador">
-                    <c:forEach items="${miadmin.listar(0)}" var="unadmin">
-                    <option value="${unadmin.idadministrador}">${unadmin.idadministrador}</option>
-                    </c:forEach><!-- Agrega más opciones según sea necesario -->
+                    <option value="">seleccione</option>
+                    @foreach ($administrador as $losadministradores)
+                    <option value=""></option>
+                    @endforeach<!-- Agrega más opciones según sea necesario -->
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Guardar</button>
@@ -54,7 +55,7 @@
             </thead>
             <tbody>
                 <!-- Aquí puedes agregar filas con datos de salidas utilizando PHP, Python, u otro lenguaje en tu servidor -->
-                @foreach ($prestamo as $losprestamos )
+                @foreach ($prestamo as $losprestamos)
                 <tr>
                         <td value="{{$losprestamos->idsalida}}">{{$losprestamos->idsalida}}</td>
                         <td value="{{$losprestamos->fechasalida}}">{{$losprestamos->fechasalida}}</td>
