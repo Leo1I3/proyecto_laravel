@@ -12,9 +12,21 @@ class DevolucionController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from detallesalida ORDER BY idDetalleSalida = ?', []);
 
-        return $_POST;
+        $devolucion = FacadesDB::select('select * from detallesalida', []);
+
+        $equipoController = new EquipoController();
+        $equipos  = $equipoController->index();
+
+        $prestamoController = new prestamoController;
+        $prestamos  = $prestamoController->index();
+
+
+        return view('devolucion', [
+            'devolucion1' => $devolucion,
+            'elprestamo' => $prestamos,
+            'elequipo' => $equipos
+        ]);
     }
 
     /**
@@ -30,8 +42,13 @@ class DevolucionController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert into `detallesalida`(`idDetalleSalida`,`fechaEntregaDetalleSalida`, `idSalida`, `idequipo`) VALUES (null,?,?,?)', []);
-        return "Insertado";
+        FacadesDB::insert('insert into `detallesalida`(`idDetalleSalida`,`fechaEntregaDetalleSalida`, `idSalida`, `idequipo`) VALUES (null,?,?,?)', [
+
+            $request->fechaEntregaDetalleSalida,
+            $request->fidSalida,
+            $request->fidequipo,
+        ]);
+        return redirect()->route('devolucion');
     }
 
     /**

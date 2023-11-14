@@ -12,11 +12,8 @@ class prestamoController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from salidaequipo ORDER BY idsalida = ?', [
-
-        ]);
-
-        return $_POST;
+        $salidaequipo = FacadesDB::select('select * from salidaequipo', []);
+        return $salidaequipo;
     }
 
     /**
