@@ -41,6 +41,8 @@
                     <div><input name="festadoE" type="radio" value="1">Prestado</div>
                     <div><input name="festadoE" type="radio"value="0">No prestado</div>
 
+
+                    
             </div>
             </div>
 
