@@ -4,40 +4,67 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar Sesión</title>
-        @vite(['resources/css/app.css','resources/js/app.js'])
+        @vite(['resources/css/Bienvenido.css','resources/js/Bienvenido.js'])
 
-    </head>
-    <body class="p-3 mb-2 bg-primary-subtle">
 
-        <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="text-center">Bienvenido</h3>
-                        </div>
-                        <div class="card-body">
-                            <form action="{{route('equipo')}}">
-                                <div class="mb-3">
-                                    <label for="Correo" class="form-label">Correo</label>
-                                    <input type="text" class="form-control" id="Correo" name="fcorreo" placeholder="Ingresa tu Correo">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="contrasena" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="contrasena" name="fclave" placeholder="Ingresa tu contraseña">
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-footer text-center">
-                            ¿No tienes una cuenta? <a href="#">Regístrate</a>
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+        </head>
+<center><div>
+    <a href="https://www.sena.edu.co/" class="" target="_blank">
+    <img src="{{ asset('Images/Logo-de-SENA-png-verde-300x300-1.png') }}" alt="" style="width: 300px; height: 200px;">
+    </a>
+</div></center>
+<center><h1>EduControl PC</h1></center>
+	<center>
+    <div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Bienvenido, Inicie Sesion</h4>
+											<div class="form-group">
+												<input type="text" name="fcorreo" class="form-style" placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
+												<i class="input-icon uil uil-at"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="password" name="fclave" class="form-style" placeholder="Ingresa tu contraseña" id="contrasena" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+                                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">¿Olvido su contraseña?</a></p>
+				      					</div>
+			      					</div>
+			      				</div>
+								<div class="card-back">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Registre su Usuario</h4>
+											<div class="form-group">
+												<input type="text" name="fNombre" class="form-style" placeholder="Ingresa tu Nombre" id="nombre" autocomplete="off">
+												<i class="input-icon uil uil-user"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="email" name="fcorreo" class="form-style" placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
+												<i class="input-icon uil uil-at"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="password" name="fclave" class="form-style" placeholder="Ingresa una Contrasena" id="contrasena" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+											<button type="submit" class="btn btn-primary">Registrese</button>
+				      					</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+    </center>
 </html>
