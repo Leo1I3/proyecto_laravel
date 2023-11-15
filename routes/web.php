@@ -17,17 +17,17 @@ use App\Http\Controllers\prestamoController;
 */
 
 Route::view('/','welcome')->name('inicio');
-Route::view('/devolucion','devolucion')->name('devolucion');
+Route::get('/devolucion',[DevolucionController::class, 'index'])->name('devolucion');
+Route::get('/prestamo',[prestamoController::class, 'index'])->name('prestamo');
 Route::view('/equipoview','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
 Route::view('/prestamo','prestamo')->name('prestamo');
 
-Route::get('/dev',[prestamoController::class,'index'])->name('listaprestamo');
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorf');
 Route::post('/prestamoPost',[prestamoController::class,'store'])->name('salidaf');
-Route::post('/Devolucion',[DevolucionController::class,'store'])->name('devolucionf');
+Route::post('/Devolucionpost',[DevolucionController::class,'store'])->name('devolucionf');
 //Route::post('/usuario',[UsuarioController::class,'store'])->name('usuariof');
 
 Route::post('/equipoUp',[EquipoController::class,'update'])->name('equiff');

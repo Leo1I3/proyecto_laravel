@@ -12,9 +12,9 @@ class EquipoController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from equipo ORDER BY idequipo = ?', []);
+        $equipo = FacadesDB::select('select * from equipo', []);
 
-        return $_POST;
+        return $equipo;
     }
 
     /**
@@ -37,7 +37,6 @@ class EquipoController extends Controller
             $request->fcodigoE,
             $request->fcolorE,
             $request->fdespE,
-            $request->$request,
         ]);
         return redirect()->route('equipo');
     }
@@ -83,4 +82,7 @@ class EquipoController extends Controller
         ]);
         return redirect()->route('equipo');
     }
+    // public function desc(){
+    //     return $this->hasOne(equipo::class,'idequipo','idequipo');
+    // }
 }

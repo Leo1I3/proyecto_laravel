@@ -12,11 +12,15 @@ class prestamoController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from salidaequipo ORDER BY idsalida = ?', [
+        $prestamo = FacadesDB::select('select * from salidaequipo', []);
 
+        $equipoController = new EquipoController();
+        $equipos  = $equipoController->index();
+
+        return view('prestamo',[
+            'elprestamo' => $prestamo,
+            'elequipo' => $equipos
         ]);
-
-        return $_POST;
     }
 
     /**
