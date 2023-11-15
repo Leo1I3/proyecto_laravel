@@ -37,6 +37,7 @@ class EquipoController extends Controller
             $request->fcodigoE,
             $request->fcolorE,
             $request->fdespE,
+            $request->estadoE,
         ]);
         return redirect()->route('equipo');
     }

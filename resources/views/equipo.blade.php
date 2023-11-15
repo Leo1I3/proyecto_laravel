@@ -38,11 +38,11 @@
             <div class="form-group">
                 <label for="serial">Estado:</label>
                 <div>
-                    <div><input name="festadoE" type="radio" value="1">Prestado</div>
-                    <div><input name="festadoE" type="radio"value="0">No prestado</div>
+                    <div><input name="estadoE" type="radio" value="1">Prestado</div>
+                    <div><input name="estadoE" type="radio"value="0">No prestado</div>
 
 
-                    
+
             </div>
             </div>
 
