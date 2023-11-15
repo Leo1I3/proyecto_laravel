@@ -48,11 +48,11 @@ class prestamoController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `salidaequipo`(idsalida,`fechasalida`, `idusuario`, `idadministrador`) VALUES (null,?,?,?)', [
+        FacadesDB::insert('insert INTO `salidaequipo`(idsalida,`fechasalida`, `idusuario`, `idAdministrador`) VALUES (null,?,?,?)', [
 
             $request->fechasalida,
-            $request->idusuario,
-            $request->idadministrador,
+            $request->fidusuario,
+            $request->fidAdministrador,
 
         ]);
         return redirect()->route('prestamo');

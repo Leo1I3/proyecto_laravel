@@ -16,9 +16,10 @@
 
         <!-- Formulario para ingresar la fecha de salida -->
         <form action="{{ route('salidaf') }}" method="post">
+            @csrf
             <div class="form-group">
                 <label for="fechaSalida">Fecha de Salida:</label>
-                <input type="date" class="form-control" id="fechaSalida" name="ffechaSalida" value="">
+                <input type="date" class="form-control" id="fechaSalida" name="fechasalida">
             </div>
 
 
