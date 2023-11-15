@@ -81,7 +81,7 @@ h6 span{
   transition: all 0.5s ease;
 }
 .checkbox:checked + label:before {
-  transform: translateX(44px) rotate(-270deg);
+  transform: translateX(44px) rotate(-180deg);
 }
 
 
@@ -98,12 +98,12 @@ h6 span{
 .card-3d-wrapper {
   width: 100%;
   height: 100%;
-  position:absolute;    
+  position:absolute;
   top: 0;
-  left: 0;  
+  left: 0;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: all 600ms ease-out; 
+  transition: all 600ms ease-out;
 }
 .card-front, .card-back {
   width: 100%;
@@ -142,7 +142,7 @@ h6 span{
 }
 
 
-.form-group{ 
+.form-group{
   position: relative;
   display: block;
     margin: 0;
@@ -175,8 +175,8 @@ h6 span{
 .input-icon {
   position: absolute;
   top: 0;
-  left: 18px;
-  height: 48px;
+  left: 8px;
+  height: 28px;
   font-size: 24px;
   line-height: 48px;
   text-align: left;
@@ -230,7 +230,7 @@ h6 span{
     transition: all 200ms linear;
 }
 
-.btn{  
+.btn{
   border-radius: 4px;
   height: 44px;
   font-size: 13px;
@@ -259,12 +259,12 @@ h6 span{
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
 .btn:active,
-.btn:focus{  
+.btn:focus{
   background-color: #102770;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
-.btn:hover{  
+.btn:hover{
   background-color: #102770;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
@@ -286,3 +286,26 @@ h6 span{
 	width: auto;
 	display: block;
 }
+
+label:before {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffeba7;
+    background-color: #102770;
+    font-family: 'unicons';
+    content: '\eb4f';
+    background-image: url('/public/Images/flecha.png');
+    background-size: cover;
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+
