@@ -19,7 +19,7 @@ class DevolucionController extends Controller
         $equipos  = $equipoController->index();
 
         $prestamoController = new prestamoController;
-        $prestamos  = $prestamoController->index();
+        $prestamos  = $prestamoController->index1();
 
 
         return view('devolucion', [

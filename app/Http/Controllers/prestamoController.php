@@ -17,10 +17,22 @@ class prestamoController extends Controller
         $equipoController = new EquipoController();
         $equipos  = $equipoController->index();
 
+        $UsuarioController = new UsuarioController();
+        $usuarios  = $UsuarioController->index();
+
+        $AdministradorController = new AdministradorController();
+        $administrador  = $AdministradorController->index();
+
         return view('prestamo',[
             'elprestamo' => $prestamo,
-            'elequipo' => $equipos
+            'elequipo' => $equipos,
+            'unusuario' => $usuarios,
+            'administrador'=> $administrador,
         ]);
+    }
+    public function index1(){
+        $prestamo = FacadesDB::select('select * from salidaequipo', []);
+        return $prestamo;
     }
 
     /**

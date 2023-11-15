@@ -21,7 +21,6 @@ Route::get('/devolucion',[DevolucionController::class, 'index'])->name('devoluci
 Route::get('/prestamo',[prestamoController::class, 'index'])->name('prestamo');
 Route::view('/equipoview','equipo')->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
-Route::view('/prestamo','prestamo')->name('prestamo');
 
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');

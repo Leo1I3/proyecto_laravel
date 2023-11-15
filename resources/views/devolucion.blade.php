@@ -27,7 +27,7 @@
                     <option value="">seleccione</option>
                     @foreach ($elprestamo as $losprestamos)
                         <!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
-                        <option value="{{$losprestamos->idSalida}}">{{ $losprestamos->idSalida}}</option>
+                        <option value="{{ $losprestamos->idSalida }}">{{ $losprestamos->idSalida }}</option>
                     @endforeach
                 </select>
             </div>
@@ -37,17 +37,17 @@
                     <option value="">seleccione</option>
                     @foreach ($elequipo as $losequipo)
                         <!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
-                        <option value="{{$losequipo->idequipo}}">{{ $losequipo-> idequipo}}</option>
+                        <option value="{{ $losequipo->idequipo }}">{{ $losequipo->idequipo }}</option>
                     @endforeach
                 </select>
             </div>
             <br>
-<br>
+            <br>
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Guardar</button>
 
         </form>
-<br>
-<br>
+        <br>
+        <br>
         <!-- Tabla para listar las entregas -->
         <h3>Lista de Entregas</h3>
         <table class="table">
@@ -63,7 +63,8 @@
                 @foreach ($devolucion1 as $devoluciones1)
                     <tr>
                         <td value="{{ $devoluciones1->idDetalleSalida }}">{{ $devoluciones1->idDetalleSalida }}</td>
-                        <td value="{{ $devoluciones1->fechaEntregaDetalleSalida }}">{{ $devoluciones1->fechaEntregaDetalleSalida }}</td>
+                        <td value="{{ $devoluciones1->fechaEntregaDetalleSalida }}">
+                            {{ $devoluciones1->fechaEntregaDetalleSalida }}</td>
 
                         <td value="{{ $devoluciones1->idSalida }}">{{ $devoluciones1->idSalida }}</td>
                         <td value="{{ $devoluciones1->idequipo }}">{{ $devoluciones1->idequipo }} </td>
