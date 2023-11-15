@@ -26,6 +26,7 @@
 								<div class="card-front">
 									<div class="center-wrap">
 										<div class="section text-center">
+                                            <form action="{{ route('equipo') }}">
 											<h4 class="mb-4 pb-3">Bienvenido, Inicie Sesion</h4>
 											<div class="form-group">
 												<input type="text" name="fcorreo" class="form-style" placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
@@ -35,7 +36,8 @@
 												<input type="password" name="fclave" class="form-style" placeholder="Ingresa tu contraseña" id="contrasena" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-                                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                                            <button type="submit" class="btn btn-primary" >Iniciar Sesión</button>
+                                            </form>
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">¿Olvido su contraseña?</a></p>
 				      					</div>
 			      					</div>
