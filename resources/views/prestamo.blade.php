@@ -14,9 +14,9 @@
     <div class="container">
         <h2>Registro de Salidas</h2>
 
-
         <!-- Formulario para ingresar la fecha de salida -->
         <form action="{{ route('salidaf') }}" method="post">
+            @csrf
             @csrf
             <div class="form-group">
                 <label for="fechaSalida">Fecha de Salida:</label>
@@ -24,12 +24,16 @@
             </div>
 
 
-        <div class="form-group">
-
-
             <div class="form-group">
                 <label for="idSalida">ID de usuario:</label>
 
+                <select class="form-control" name="fidusuario">
+                    <option value="">seleccione</option>
+                    @foreach ($unusuario as $losusuarios)
+                        <!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
+                        <option value="{{$losusuarios->idusuario}}">{{$losusuarios->idusuario}}</option>
+                    @endforeach
+                    <!-- Agrega más opciones según sea necesario -->
                 <select class="form-control" name="fidusuario">
                     <option value="">seleccione</option>
                     @foreach ($unusuario as $losusuarios)
@@ -65,14 +69,6 @@
             </thead>
             <tbody>
                 <!-- Aquí puedes agregar filas con datos de salidas utilizando PHP, Python, u otro lenguaje en tu servidor -->
-                <c:forEach items="${mitabla.listar(0)}" var="unatabla">
-                <tr>
-                        <td value="${unatabla.idSalida}">${unatabla.idSalida}</td>
-                        <td value="${unatabla.fechaSalida}">${unatabla.fechaSalida}</td>
-                        <td value="${unatabla.idusuario}">${unatabla.idusuario}</td>
-                        <td value="${unatabla.idAdministrador}">${unatabla.idAdministrador}</td>
-                </tr>
-               </c:forEach>
                 @foreach ($elprestamo as $losprestamos)
                     <tr>
                         <td value="{{ $losprestamos->idSalida }}">{{ $losprestamos->idSalida }}</td>
