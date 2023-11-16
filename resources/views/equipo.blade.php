@@ -46,8 +46,6 @@
             </div>
             </div>
 
-
-            
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Registrar</button>
         </form>
     </div>

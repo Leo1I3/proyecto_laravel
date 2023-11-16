@@ -17,7 +17,6 @@
         <!-- Formulario para ingresar la fecha de salida -->
         <form action="{{ route('salidaf') }}" method="post">
             @csrf
-            @csrf
             <div class="form-group">
                 <label for="fechaSalida">Fecha de Salida:</label>
                 <input type="date" class="form-control" id="fechaSalida" name="fechasalida">
@@ -27,13 +26,6 @@
             <div class="form-group">
                 <label for="idSalida">ID de usuario:</label>
 
-                <select class="form-control" name="fidusuario">
-                    <option value="">seleccione</option>
-                    @foreach ($unusuario as $losusuarios)
-                        <!-- Aquí puedes agregar opciones de ID de salida, por ejemplo: -->
-                        <option value="{{$losusuarios->idusuario}}">{{$losusuarios->idusuario}}</option>
-                    @endforeach
-                    <!-- Agrega más opciones según sea necesario -->
                 <select class="form-control" name="fidusuario">
                     <option value="">seleccione</option>
                     @foreach ($unusuario as $losusuarios)
