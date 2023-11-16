@@ -35,6 +35,9 @@
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
 
+
+
+                
             </div>
             <div class="form-group">
                 <label for="idEquipo">ID de administrador:</label>
