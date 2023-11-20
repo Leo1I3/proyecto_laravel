@@ -21,20 +21,20 @@
         <form action="{{ route('equipof') }}" method="post">
             @csrf
             <div class="form-group">
-                <input type="hidden" class="form-control" id="idEquipo"name="fequipo">
+                <input type="hidden" class="form-control" id="idEquipo"name="equipo">
                 <label for="marca">Marca:</label>
-                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="fmarcaE">
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="marcaE">
             </div>
             <div class="form-group">
                 <label for="modelo">Codigo:</label>
-                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el codigo" name="fcodigoE">
+                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el codigo" name="codigoE">
             </div>
             <div class="form-group">
                 <label for="serial">Color:</label>
-                <input type="text" class="form-control" id="color" placeholder="Ingrese el color" name="fcolorE"
+                <input type="text" class="form-control" id="color" placeholder="Ingrese el color" name="colorE"
             <div class="form-group">
                 <label for="serial">Descripcion:</label>
-                <input type="text" class="form-control" id="serial" placeholder="Ingrese una descripcion de el equipo" name="fdespE">
+                <input type="text" class="form-control" id="serial" placeholder="Ingrese una descripcion de el equipo" name="despE">
             </div>
             <div class="form-group">
                 <label for="serial">Estado:</label>
