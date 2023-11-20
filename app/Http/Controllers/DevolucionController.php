@@ -16,17 +16,17 @@ class DevolucionController extends Controller
         $devolucion = FacadesDB::select('select * from detallesalida', []);
 
         $equipoController = new EquipoController();
-        $equipos  = $equipoController->index();
+        $equipos  = $equipoController->index1();
 
         $prestamoController = new prestamoController;
         $prestamos  = $prestamoController->index1();
-
 
         return view('devolucion', [
             'devolucion1' => $devolucion,
             'elprestamo' => $prestamos,
             'elequipo' => $equipos
         ]);
+
     }
 
     /**
@@ -34,6 +34,19 @@ class DevolucionController extends Controller
      */
     public function create()
     {
+        $devolucion = FacadesDB::select('select * from detallesalida', []);
+
+        $equipoController = new EquipoController();
+        $equipos  = $equipoController->index();
+
+        $prestamoController = new prestamoController;
+        $prestamos  = $prestamoController->index1();
+
+        return view('devolucion', [
+            'devolucion1' => $devolucion,
+            'elprestamo' => $prestamos,
+            'elequipo' => $equipos
+        ]);
 
     }
 

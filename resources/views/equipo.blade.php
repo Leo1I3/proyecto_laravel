@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>equipo</title>
+
 </head>
 <body>
     @include('partials.nav')
@@ -48,6 +49,34 @@
 
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Registrar</button>
         </form>
+
+        <h3>Lista de Equipos</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID equipo</th>
+                    <th>marca</th>
+                    <th>codigo</th>
+                    <th>color</th>
+                    <th>descripcion</th>
+                    <th>estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($elequipo as $equipos)
+                    <tr>
+                        <td value="{{ $equipos->idequipo }}">{{ $equipos->idequipo }}</td>
+                        <td value="{{ $equipos->marcaE }}">{{ $equipos->marcaE }}</td>
+                        <td value="{{ $equipos->codigoE }}">{{ $equipos->codigoE }}</td>
+                        <td value="{{ $equipos->colorE }}">{{ $equipos->colorE }} </td>
+                        <td value="{{ $equipos->despE }}">{{ $equipos->despE }} </td>
+                        <td value="{{ $equipos->estadoE }}">{{ $equipos->estadoE }} </td>
+                    </tr>
+                @endforeach
+
+                <!-- Puedes agregar más filas aquí -->
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

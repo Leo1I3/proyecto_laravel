@@ -19,7 +19,7 @@ use App\Http\Controllers\prestamoController;
 Route::view('/','welcome')->name('inicio');
 Route::get('/devolucion',[DevolucionController::class, 'index'])->name('devolucion');
 Route::get('/prestamo',[prestamoController::class, 'index'])->name('prestamo');
-Route::view('/equipoview','equipo')->name('equipo');
+Route::get('/equipo',[EquipoController::class, 'index'])->name('equipo');
 Route::view('/nosotros','nosotros')->name('nosotros');
 
 
