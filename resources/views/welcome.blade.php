@@ -24,7 +24,7 @@
 								<div class="card-front">
 									<div class="center-wrap">
 										<div class="section text-center">
-                                            <form action="{{ route('equipo') }}">
+                                            <form action="">
 											<h4 class="mb-4 pb-3">Bienvenido, Inicie Sesion</h4>
 											<div class="form-group">
 												<input type="text" name="fNombre" class="form-style" placeholder="Ingresa tu Nombre" id="Nombre" autocomplete="off">
@@ -38,7 +38,7 @@
 												<input type="password" name="fclave" class="form-style" placeholder="Ingresa tu contraseña" id="contrasena" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"><img src="{{ asset('Images/contrasena.png') }}" alt="" style="width: 33px; height: 38px;"></i>
 											</div>
-                                            <button type="submit" class="btn btn-primary" >Iniciar Sesión</button>
+                                            <button type="submit" class="btn btn-primary"  >Iniciar Sesión</button>
                                             </form>
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">¿Olvido su contraseña?</a></p>
 				      					</div>
@@ -47,20 +47,23 @@
 								<div class="card-back">
 									<div class="center-wrap">
 										<div class="section text-center">
+                                            <form action="{{ route('usuariof') }}" method="post">
+                                                @csrf
 											<h4 class="mb-4 pb-3">Registre su Usuario</h4>
 											<div class="form-group">
-												<input type="text" name="fNombre" class="form-style" placeholder="Ingresa tu Nombre" id="nombre" autocomplete="off">
+												<input type="text" name="nombre" class="form-style" placeholder="Ingresa tu Nombre" id="nombre" autocomplete="off">
 												<i class="input-icon uil uil-user"><img src="{{ asset('Images/usuario.png') }}" alt="" style="width: 33px; height: 38px;"></i>
 											</div>
 											<div class="form-group mt-2">
-												<input type="email" name="fcorreo" class="form-style" placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
+												<input type="email" name="correo" class="form-style" placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
 												<i class="input-icon uil uil-at"><img src="{{ asset('Images/correo.png') }}" alt="" style="width: 33px; height: 38px;"></i>
 											</div>
 											<div class="form-group mt-2">
-												<input type="password" name="fclave" class="form-style" placeholder="Ingresa una Contrasena" id="contrasena" autocomplete="off">
+												<input type="password" name="contraseña" class="form-style" placeholder="Ingresa una Contrasena" id="contrasena" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"><img src="{{ asset('Images/correo.png') }}" alt="" style="width: 33px; height: 38px;"></i>
 											</div>
 											<button type="submit" class="btn btn-primary">Registrese</button>
+                                        </form>
 				      					</div>
 			      					</div>
 			      				</div>

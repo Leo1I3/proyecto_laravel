@@ -15,7 +15,9 @@ class UsuarioController extends Controller
     {
         $usuario = FacadesDB::select('select * from usuario', []);
 
-        return $usuario;
+        return view('usuario', [
+            'elusuaruio' => $usuario
+        ]);
     }
 
     /**
@@ -31,8 +33,14 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `usuario`(idusuario,`nombre`, `contraseña`) VALUES (null,?,?)', []);
-        return "Insertado";
+        FacadesDB::insert('insert INTO `usuario`(idusuario,`nombre`, `contraseña`,`correo` ) VALUES (null,?,?,?)', [
+
+        $request->nombre,
+        $request->contraseña,
+        $request->correo,
+    ]);
+    return redirect()->route('inicio');
+
     }
 
     /**
