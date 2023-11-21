@@ -14,7 +14,13 @@ class EquipoController extends Controller
     {
         $equipo = FacadesDB::select('select * from equipo', []);
 
-        return $equipo;
+        return view('equipo', [
+            'elequipo' => $equipo
+        ]);
+    }
+    public function index1(){
+        $elequipo = FacadesDB::select('select * from equipo', []);
+        return $elequipo;
     }
 
     /**
@@ -33,10 +39,11 @@ class EquipoController extends Controller
 
 
         FacadesDB::insert('insert INTO `equipo`(idequipo,`marcaE`, `codigoE`, `colorE`, `despE` , `estadoE`) VALUES (null,?,?,?,?,?)', [
-            $request->fmarcaE,
-            $request->fcodigoE,
-            $request->fcolorE,
-            $request->fdespE,
+            $request->marcaE,
+            $request->codigoE,
+            $request->colorE,
+            $request->despE,
+            $request->estadoE,
         ]);
         return redirect()->route('equipo');
     }

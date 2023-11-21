@@ -13,9 +13,9 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $_POST = FacadesDB::select('select * from usuario ORDER BY idusuario = ?', []);
+        $usuario = FacadesDB::select('select * from usuario', []);
 
-        return $_POST;
+        return $usuario;
     }
 
     /**

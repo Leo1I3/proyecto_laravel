@@ -10,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css','resources/js/app.js'])
     <title>equipo</title>
+
 </head>
 <body>
     @include('partials.nav')
@@ -20,34 +21,62 @@
         <form action="{{ route('equipof') }}" method="post">
             @csrf
             <div class="form-group">
-                <input type="hidden" class="form-control" id="idEquipo"name="fequipo">
+                <input type="hidden" class="form-control" id="idEquipo"name="equipo">
                 <label for="marca">Marca:</label>
-                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="fmarcaE">
+                <input type="text" class="form-control" id="marca" placeholder="Ingrese la marca" name="marcaE">
             </div>
             <div class="form-group">
                 <label for="modelo">Codigo:</label>
-                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el codigo" name="fcodigoE">
+                <input type="text" class="form-control" id="codigo" placeholder="Ingrese el codigo" name="codigoE">
             </div>
             <div class="form-group">
                 <label for="serial">Color:</label>
-                <input type="text" class="form-control" id="color" placeholder="Ingrese el color" name="fcolorE"
+                <input type="text" class="form-control" id="color" placeholder="Ingrese el color" name="colorE"
             <div class="form-group">
                 <label for="serial">Descripcion:</label>
-                <input type="text" class="form-control" id="serial" placeholder="Ingrese una descripcion de el equipo" name="fdespE">
+                <input type="text" class="form-control" id="serial" placeholder="Ingrese una descripcion de el equipo" name="despE">
             </div>
             <div class="form-group">
                 <label for="serial">Estado:</label>
                 <div>
-                    <div><input name="festadoE" type="radio" value="1">Prestado</div>
-                    <div><input name="festadoE" type="radio"value="0">No prestado</div>
+                    <div><input name="estadoE" type="radio" value="1">Prestado</div>
+                    <div><input name="estadoE" type="radio"value="0">No prestado</div>
 
 
-                    
+
             </div>
             </div>
 
             <button type="submit" class="btn btn-primary" name="faccion" value="insertar">Registrar</button>
         </form>
+
+        <h3>Lista de Equipos</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID equipo</th>
+                    <th>marca</th>
+                    <th>codigo</th>
+                    <th>color</th>
+                    <th>descripcion</th>
+                    <th>estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($elequipo as $equipos)
+                    <tr>
+                        <td value="{{ $equipos->idequipo }}">{{ $equipos->idequipo }}</td>
+                        <td value="{{ $equipos->marcaE }}">{{ $equipos->marcaE }}</td>
+                        <td value="{{ $equipos->codigoE }}">{{ $equipos->codigoE }}</td>
+                        <td value="{{ $equipos->colorE }}">{{ $equipos->colorE }} </td>
+                        <td value="{{ $equipos->despE }}">{{ $equipos->despE }} </td>
+                        <td value="{{ $equipos->estadoE }}">{{ $equipos->estadoE }} </td>
+                    </tr>
+                @endforeach
+
+                <!-- Puedes agregar más filas aquí -->
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

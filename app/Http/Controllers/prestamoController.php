@@ -17,10 +17,22 @@ class prestamoController extends Controller
         $equipoController = new EquipoController();
         $equipos  = $equipoController->index();
 
+        $UsuarioController = new UsuarioController();
+        $usuarios  = $UsuarioController->index();
+
+        $AdministradorController = new AdministradorController();
+        $administrador  = $AdministradorController->index();
+
         return view('prestamo',[
             'elprestamo' => $prestamo,
-            'elequipo' => $equipos
+            'elequipo' => $equipos,
+            'unusuario' => $usuarios,
+            'administrador'=> $administrador,
         ]);
+    }
+    public function index1(){
+        $prestamo = FacadesDB::select('select * from salidaequipo', []);
+        return $prestamo;
     }
 
     /**
@@ -36,11 +48,11 @@ class prestamoController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `salidaequipo`(idsalida,`fechasalida`, `idusuario`, `idadministrador`) VALUES (null,?,?,?)', [
+        FacadesDB::insert('insert INTO `salidaequipo`(idsalida,`fechasalida`, `idusuario`, `idAdministrador`) VALUES (null,?,?,?)', [
 
             $request->fechasalida,
-            $request->idusuario,
-            $request->idadministrador,
+            $request->fidusuario,
+            $request->fidAdministrador,
 
         ]);
         return redirect()->route('prestamo');
