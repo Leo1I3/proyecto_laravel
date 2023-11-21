@@ -15,9 +15,7 @@ class UsuarioController extends Controller
     {
         $usuario = FacadesDB::select('select * from usuario', []);
 
-        return view('usuario', [
-            'elusuaruio' => $usuario
-        ]);
+        return $usuario;
     }
 
     /**
