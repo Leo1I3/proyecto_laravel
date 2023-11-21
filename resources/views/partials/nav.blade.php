@@ -40,7 +40,7 @@
                         CONTACTENOS
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="https://twitter.com/?lang=es">twittter</a></li>
+                        <li><a class="dropdown-item" href="https://twitter.com/?lang=es"><img src="public/Images/icono-twitter-iconos-redes-sociales-estilo-corte-papel_505135-257.avif" alt="Twitter Logo"></a></li>
                         <li><a class="dropdown-item" href="https://www.instagram.com">instragram</a></li>
                         <li><a class="dropdown-item" href="https://www.facebook.com">facebook</a></li>
                         <li><a class="dropdown-item" href="https://www.youtube.com">youtube</a></li>

@@ -17,13 +17,19 @@
         <section id="detalles-servicio" class="mt-4">
             <h2>Detalles de Servicio</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nullam auctor, velit eget ullamcorper rhoncus, tortor velit 
-                laoreet felis, nec lacinia libero ex eu velit. In tincidunt 
-                libero ac risus ullamcorper, a ultricies sapien ultrices. 
-                Nulla facilisi. Sed tristique nunc in sapien luctus, ac 
-                euismod turpis laoreet. Fusce sit amet eros nec ante dignissim 
-                condimentum. Fusce vitae laoreet sapien.
+                Ingreso:
+
+Registro de detalles del equipo.
+Inspección y configuración inicial.
+Asignación a un usuario o departamento específico.
+Período de Uso:
+
+Monitoreo continuo del estado y rendimiento del equipo.
+Salida:
+
+Registro detallado de la devolución.
+Verificación del estado y eliminación segura de datos si es necesario.
+Este servicio garantiza una administración completa y eficiente de los equipos desde su ingreso hasta su salida, contribuyendo a la eficiencia operativa y la seguridad de los activos tecnológicos.
             </p>
         </section>
 
@@ -33,13 +39,19 @@
         <section id="condiciones-uso" class="mt-4">
             <h2>Condiciones de Uso</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nullam auctor, velit eget ullamcorper rhoncus, tortor velit 
-                laoreet felis, nec lacinia libero ex eu velit. In tincidunt 
-                libero ac risus ullamcorper, a ultricies sapien ultrices. 
-                Nulla facilisi. Sed tristique nunc in sapien luctus, ac 
-                euismod turpis laoreet. Fusce sit amet eros nec ante dignissim 
-                condimentum. Fusce vitae laoreet sapien.
+                Uso Adecuado:
+
+Los equipos deben utilizarse únicamente para fines laborales y autorizados.
+Cuidado del Equipo:
+
+Los usuarios son responsables de mantener el equipo en buen estado y reportar cualquier daño.
+Seguridad de Datos:
+
+Prohibición de instalación de software no autorizado.
+Cumplimiento de políticas de seguridad de datos al salir.
+Reporte de Incidentes:
+
+Los usuarios deben informar cualquier incidente, pérdida o robo de equipo de inmediato.
             </p>
         </section>
 
@@ -49,12 +61,12 @@
         <section id="lo-que-hacemos" class="mt-4">
             <h2>Lo Que Hacemos</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Nullam auctor, velit eget ullamcorper rhoncus, tortor velit 
-                laoreet felis, nec lacinia libero ex eu velit. In tincidunt 
-                libero ac risus ullamcorper, a ultricies sapien ultrices. 
-                Nulla facilisi. Sed tristique nunc in sapien luctus, ac 
-                euismod turpis laoreet. Fusce sit amet eros nec ante dignissim 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam auctor, velit eget ullamcorper rhoncus, tortor velit
+                laoreet felis, nec lacinia libero ex eu velit. In tincidunt
+                libero ac risus ullamcorper, a ultricies sapien ultrices.
+                Nulla facilisi. Sed tristique nunc in sapien luctus, ac
+                euismod turpis laoreet. Fusce sit amet eros nec ante dignissim
                 condimentum. Fusce vitae laoreet sapien.
             </p>
         </section>

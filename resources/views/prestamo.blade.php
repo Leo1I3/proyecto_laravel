@@ -9,9 +9,9 @@
     <title>prestamo</title>
 </head>
 
-<body>
+<body class="bodyDevolucion" style="background-image: url('/Images/Como-gestionar-las-devoluciones-y-mejorar-la-trazabilidad.png')">
     @include('partials.nav')
-    <div class="container">
+    <div class="container divPrincipal">
         <h2>Registro de Salidas</h2>
 
         <!-- Formulario para ingresar la fecha de salida -->
@@ -37,7 +37,7 @@
 
 
 
-                
+
             </div>
             <div class="form-group">
                 <label for="idEquipo">ID de administrador:</label>

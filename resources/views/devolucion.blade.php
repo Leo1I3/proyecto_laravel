@@ -9,9 +9,9 @@
     <title>Devoluciones</title>
 </head>
 
-<body>
+<body class="bodyDevolucion" style="background-image: url('/Images/3d-illustration-advanced-mobile-microprocessor-600nw-2154798885.webp')">
     @include('partials.nav')
-    <div class="container">
+    <div class="container divPrincipal">
         <h2>Registro de Entregas</h2>
 
         <!-- Formulario para ingresar la fecha de entrega, ID de salida y ID de equipo -->
