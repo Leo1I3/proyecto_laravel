@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DevolucionController;
 use App\Http\Controllers\EquipoController;
 use App\Http\Controllers\prestamoController;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::view('/nosotros','nosotros')->name('nosotros');
 
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
+Route::post('/usuarioPost',[UsuarioController::class,'store'])->name('usuariof');
+// Route::post('/usuarioPost', ['UsuarioController@store'])->name('usuariof');
 //Route::post('/administrador',[AdministradorController::class,'store'])->name('administradorf');
 Route::post('/prestamoPost',[prestamoController::class,'store'])->name('salidaf');
 Route::post('/Devolucionpost',[DevolucionController::class,'store'])->name('devolucionf');
