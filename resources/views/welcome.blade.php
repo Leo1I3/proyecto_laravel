@@ -24,7 +24,7 @@
 								<div class="card-front">
 									<div class="center-wrap">
 										<div class="section text-center">
-                                            <form action="">
+                                            <form action="{{ route('equipo') }}">
 											<h4 class="mb-4 pb-3">Bienvenido, Inicie Sesion</h4>
 											<div class="form-group">
 												<input type="text" name="fNombre" class="form-style" placeholder="Ingresa tu Nombre" id="Nombre" autocomplete="off">
