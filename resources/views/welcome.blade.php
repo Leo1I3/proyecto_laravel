@@ -18,7 +18,7 @@
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-			          	<label for="reg-log"></label>
+			          	<label id="b" for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">

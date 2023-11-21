@@ -288,7 +288,7 @@ h6 span{
 }
 
 
-label:before {
+label.b {
     position: absolute;
     display: block;
     width: 36px;
