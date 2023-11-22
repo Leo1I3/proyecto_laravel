@@ -17,8 +17,16 @@
 <body>
     @include('partials.nav')
 
+    @if (Auth::check())
+    {{-- El usuario está autenticado --}}
+    <p>Bienvenido, {{ Auth::user()->nombre }}</p>
+@else
+    {{-- El usuario no está autenticado --}}
+    <p>No has iniciado sesión.</p>
+@endif
+
     <div class="container divPrincipal mt-5">
-        <h1>Registro de Computadoras</h1>
+        <h1>Registro de Computadoras </h1>
 
 
         <form action="{{ route('equipof') }}" method="post">
