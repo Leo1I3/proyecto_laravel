@@ -19,7 +19,7 @@
 
     @if (Auth::check())
     {{-- El usuario está autenticado --}}
-    <title>Bienvenido, {{ Auth::user()->nombre }}</title>
+    <h1>Bienvenido, {{ Auth::user()->nombre }}</h1>
 @else
     {{-- El usuario no está autenticado --}}
     <p>No has iniciado sesión.</p>
