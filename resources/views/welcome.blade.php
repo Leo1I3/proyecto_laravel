@@ -35,7 +35,7 @@
                                             <h4 class="mb-4 pb-3">Bienvenido, Inicie Sesión</h4>
 
                                             <div class="form-group">
-                                                <input type="text" name="correo" class="form-style"
+                                                <input type="email" name="correo" class="form-style"
                                                     placeholder="Ingresa tu Correo" id="Correo" autocomplete="off">
                                                 <i class="input-icon uil uil-at"><img
                                                         src="{{ asset('Images/correo.png') }}" alt=""

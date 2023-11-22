@@ -9,7 +9,7 @@ use App\Http\Controllers\AuthController;
 
 
 Route::view('/','welcome')->name('inicio');
-
+Route::post('/usuarioPost',[UsuarioController::class,'store'])->name('usuariof');
 Route::middleware(['auth'])->group(function () {
 Route::get('/devolucion',[DevolucionController::class, 'index'])->name('devolucion');
 Route::get('/prestamo',[prestamoController::class, 'index'])->name('prestamo');
@@ -18,7 +18,7 @@ Route::view('/nosotros','nosotros')->name('nosotros');
 
 
 Route::post('/equipoPost',[EquipoController::class,'store'])->name('equipof');
-Route::post('/usuarioPost',[UsuarioController::class,'store'])->name('usuariof');
+
 
 Route::post('/prestamoPost',[prestamoController::class,'store'])->name('salidaf');
 Route::post('/Devolucionpost',[DevolucionController::class,'store'])->name('devolucionf');

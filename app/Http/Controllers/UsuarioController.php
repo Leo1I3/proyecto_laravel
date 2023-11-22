@@ -13,7 +13,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuario = FacadesDB::select('select * from usuario', []);
+        $usuario = FacadesDB::select('select * from users', []);
 
         return $usuario;
     }
@@ -31,7 +31,7 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        FacadesDB::insert('insert INTO `usuario`(idusuario,`nombre`, `contraseña`,`correo` ) VALUES (null,?,?,?)', [
+        FacadesDB::insert('insert INTO `users`(id,`nombre`, `contraseña`,`correo` ) VALUES (null,?,?,?)', [
 
         $request->nombre,
         $request->contraseña,
@@ -62,7 +62,7 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        FacadesDB::update('update usuario set nombre =?,contraseña=?  where idusuario = ?', []);
+        FacadesDB::update('update users set nombre =?,contraseña=?  where id = ?', []);
     }
 
     /**
@@ -70,7 +70,7 @@ class UsuarioController extends Controller
      */
     public function destroy(string $id)
     {
-        FacadesDB::delete('delete from usuario where idusuario = ?', []);
+        FacadesDB::delete('delete from users where id = ?', []);
     }
 }
 
